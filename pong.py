@@ -38,13 +38,13 @@ while continuer == 1:
                     menu = 1
                     jeu = 0
                 if event.key == K_z:
-                    raquette1.moove(HAUT)
+                    raquette1.moove(fenetre, HAUT)
                 if event.key == K_s:
-                    raquette2.moove(BAS)
+                    raquette2.moove(fenetre, BAS)
                 if event.key == K_UP:
-                    raquette2.moove(HAUT)
+                    raquette2.moove(fenetre, HAUT)
                 if event.key == K_DOWN:
-                    raquette2.moove(BAS)
+                    raquette2.moove(fenetre, BAS)
         balle.refresh(raquette1, raquette2)
         pygame.display.flip()
 

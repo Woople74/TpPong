@@ -12,12 +12,12 @@ class Raquette:
         self.direction = RIEN
         self.image = pygame.image.load("Img/raquette.png").convert_alpha()
         self.rect = Rect((self.x, self.y), (largeurP, hauteurP))
-    def moove(self, fenetre):
-        self.y = VITESSE_RAQUETTE * self.direction  
+    def moove(self, fenetre, direction):
+        self.y = VITESSE_RAQUETTE * direction  
         if self.y > hauteurP and self.y == 480 - hauteurP: 
             fenetre.blit(self.image, (self.x, self.y))
     def collide(self, balle):
-        if self.rect.collide(balle) == True:
+        if self.rect.colliderect(balle) == True:
             return True
 
 class Balle:
